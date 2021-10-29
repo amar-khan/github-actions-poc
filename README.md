@@ -1,2 +1,4 @@
-# github-actions-poc
-This is to elaborate github actions workflow 
+java-hello-world-webapp
+=======================
+
+A simple java web app
