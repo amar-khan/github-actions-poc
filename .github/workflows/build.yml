@@ -1,0 +1,20 @@
+name: "CI build"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-application-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set repository vars
+        id: vars
+        shell: bash
+        run: |
+          echo "::set-output name=sha_short::$(git log --format="%H" -n 1 | cut -c1-6)"
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
