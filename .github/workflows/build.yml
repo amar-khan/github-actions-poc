@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: FreezeCheck
-        uses: amar-khan/check-prod-freeze@main
+        uses: amar-khan/check-prod-freeze@v1.0
         with:
           env: 'prod'
           force_deploy: false    
