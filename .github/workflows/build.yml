@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: FreezeCheck
-        uses: amar.khan/check-prod-freeze@v1.0
+        uses: amar-khan/check-prod-freeze@v1.0
         with:
           env: 'prod'
           force_deploy: false    
