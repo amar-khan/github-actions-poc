@@ -7,8 +7,12 @@ jobs:
   build-application-qa:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: FreezeCheck
-        uses: amarkotasky/check-prod-freeze@v1.0
+        uses: amar-khan/check-prod-freeze@v1.0
         with:
           env: 'prod'
           force_deploy: false    
