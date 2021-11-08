@@ -17,7 +17,7 @@ jobs:
           env: 'prod'
           force_deploy: false
           freezeStart: "16:00"
-          freezeEnd: "17:00"
+          freezeEnd: "17:30"
       - name: Checkout
         uses: actions/checkout@v2
         with:
