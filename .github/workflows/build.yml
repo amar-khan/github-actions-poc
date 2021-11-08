@@ -12,10 +12,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: FreezeCheck
-        uses: amar-khan/check-prod-freeze@v1.0
+        uses: amar-khan/check-prod-freeze@main
         with:
           env: 'prod'
-          force_deploy: false    
+          force_deploy: false
+          freezeStart: "16:00"
+          freezeEnd: "17:00"
       - name: Checkout
         uses: actions/checkout@v2
         with:
